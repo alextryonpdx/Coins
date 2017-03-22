@@ -2,7 +2,34 @@
 
 <h2>To make $<%=@breakdown['Total']%> you will need: </h2>
 
-<h3><%=@breakdown['Quarters']%> Quarters</h3>
-<h3><%=@breakdown['Dimes']%> Dimes</h3>
-<h3><%=@breakdown['Nickles']%> Nickles</h3>
-<h3><%=@breakdown['Pennies']%> Pennies</h3>
+<% if @breakdown['Quarters'] > 0.0 %>
+	<% if @breakdown['Quarters'] == 1.0 %>
+		<h3><%=@breakdown['Quarters']%> Quarter</h3>
+	<% else %>
+		<h3><%=@breakdown['Quarters']%> Quarters</h3>
+	<% end %>
+<% end %>
+
+<% if @breakdown['Dimes'] > 0.0 %>
+	<% if @breakdown['Dimes'] == 1.0 %>
+		<h3><%=@breakdown['Dimes']%> Dime</h3>
+	<% else %>
+		<h3><%=@breakdown['Dimes']%> Dimes</h3>
+	<% end %>
+<% end %>
+
+<% if @breakdown['Nickles'] > 0.0 %>
+	<% if @breakdown['Nickles'] == 1.0 %>
+		<h3><%=@breakdown['Nickles']%> Nickle</h3>
+	<% else %>
+		<h3><%=@breakdown['Nickles']%> Nickles</h3>
+	<% end %>
+<% end %>
+
+<% if @breakdown['Pennies'] > 0.0 %>
+	<% if @breakdown['Pennies'] == 1.0 %>
+		<h3><%=@breakdown['Pennies']%> Penny</h3>
+	<% else %>
+		<h3><%=@breakdown['Pennies']%> Pennies</h3>
+	<% end %>
+<% end %>
