@@ -10,8 +10,8 @@ get('/') do
 end
 
 
-get('/breakdown') do
-  @total = fetch.params('total')
-  @breakdown = @coords.coins?
+get('/result') do
+  @breakdown = params.fetch('total').to_f.coin_breakdown()
+# binding.pry
   erb(:result)
 end
